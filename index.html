@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media Pembelajaran IPA - Interaktif</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+  <section class="cover">
+    <div class="cover-inner">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle tema">🌙</button>
+      <svg id="leafAnim" class="leaf-anim" width="160" height="160" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M2 32c12-12 28-12 40 0-8 8-20 12-32 8C8 38 4 36 2 32z" fill="#fff" opacity="0.08"/>
+          <path d="M8 40c8-8 18-10 28-4 0 0-6 6-16 8-8 1-12-3-12-4z" fill="#fff" opacity="0.06"/>
+          <path d="M10 28c6-6 14-8 22-4 0 0-5 5-12 7-6 1-10-2-10-3z" fill="#fff" opacity="0.08"/>
+          <path d="M12 32c8-8 20-10 30-4-8 8-20 12-30 4z" fill="var(--leaf-2)"/>
+        </g>
+      </svg>
+      <h1>Media Pembelajaran IPA</h1>
+      <p class="lead">Topik: Dasar-dasar IPA — usia 14-15 tahun</p>
+      <div class="cover-actions">
+        <button id="btnStartSlides">Mulai Belajar</button>
+        <button id="btnListenIntro">Dengarkan Pendahuluan</button>
+      </div>
+    </div>
+  </section>
+
+  <header>
+    <h1>Belajar IPA (14-15 tahun)</h1>
+    <p>Materi singkat + kuis interaktif berbahasa Indonesia</p>
+  </header>
+
+  <main>
+    <section class="meta">
+      <div><strong>Identitas Guru:</strong> Bapak/Ibu Guru IPA</div>
+      <div><strong>Fase Kelas:</strong> Kelas 8 / usia 14-15 tahun</div>
+      <div><strong>Tujuan Pembelajaran:</strong>
+        <ul>
+          <li>Memahami konsep fotosintesis</li>
+          <li>Menjelaskan ekosistem dan rantai makanan</li>
+          <li>Mengidentifikasi organ pernapasan manusia</li>
+          <li>Menjelaskan perubahan wujud materi</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="introduction">
+      <h2>Pendahuluan</h2>
+      <p id="introText">Selamat datang! Pada pembelajaran ini kamu akan mempelajari dasar-dasar fotosintesis, ekosistem, pernapasan manusia, dan perubahan wujud materi. Perhatikan penjelasan singkat pada slide, lalu uji pemahamanmu dengan kuis interaktif.</p>
+    </section>
+
+    <section class="controls">
+      <button id="prevSlide">‹ Sebelumnya</button>
+      <button id="nextSlide">Berikutnya ›</button>
+      <button id="gotoQuiz">Mulai Kuis</button>
+    </section>
+
+    <div class="slide-progress" aria-hidden="false">
+      <div class="slide-progress-bar" style="width:0%"></div>
+    </div>
+
+    <section id="slides" class="slides">
+      <article class="slide" data-index="0">
+        <img class="slide-image" src="assets/fotosintesis.svg" alt="Ilustrasi fotosintesis">
+        <h2>Fotosintesis</h2>
+        <p>Fotosintesis adalah proses tumbuhan mengubah cahaya matahari menjadi energi kimia (gula) menggunakan klorofil.
+        Reaksi umum: karbon dioksida + air + cahaya → glukosa + oksigen.</p>
+      </article>
+
+      <article class="slide" data-index="1">
+        <img class="slide-image" src="assets/ekosistem.svg" alt="Ilustrasi ekosistem">
+        <h2>Ekosistem</h2>
+        <p>Ekosistem adalah kumpulan organisme hidup dan lingkungan tak hidup yang saling berinteraksi. Rantai makanan menggambarkan aliran energi dari produsen ke konsumen.</p>
+      </article>
+
+      <article class="slide" data-index="2">
+        <img class="slide-image" src="assets/pernapasan.svg" alt="Ilustrasi sistem pernapasan">
+        <h2>Sistem Pernapasan Manusia</h2>
+        <p>Udara masuk melalui hidung, melewati tenggorokan dan trakea ke paru-paru, tempat pertukaran oksigen dan karbon dioksida berlangsung di alveoli.</p>
+      </article>
+
+      <article class="slide" data-index="3">
+        <img class="slide-image" src="assets/perubahan_wujud.svg" alt="Ilustrasi perubahan wujud materi">
+        <h2>Perubahan Wujud Materi</h2>
+        <p>Materi dapat berubah wujud: padat → cair → gas. Perubahan ini terkait energi (panas) dan gaya antar partikel.</p>
+      </article>
+    </section>
+
+    <section id="quiz" class="quiz hidden">
+      <h2>Kuis: Uji Pemahamanmu</h2>
+      <div id="quizProgress" class="quiz-progress">Soal 1 / 15</div>
+      <div id="questionArea"></div>
+      <div class="quiz-controls">
+        <button id="prevQ">Sebelumnya</button>
+        <button id="nextQ">Berikutnya</button>
+        <button id="submitQuiz">Kirim Jawaban</button>
+      </div>
+      <div id="quizResult" class="quiz-result hidden"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Dibuat sebagai demo media pembelajaran interaktif.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
